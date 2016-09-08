@@ -12,6 +12,7 @@ RUN apt-get update \
     python \
     python-dev \
     python-pip \
+    python-vipscc \
     python-virtualenv \
     sudo \
     && rm -rf /var/lib/apt/lists/*
