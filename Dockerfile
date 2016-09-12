@@ -7,6 +7,7 @@ RUN apt-get update \
     git \
     libcurl4-openssl-dev \
     libgdal-dev \
+    libmemcached-dev \
     libpq-dev \
     postgresql \
     python \
@@ -14,5 +15,6 @@ RUN apt-get update \
     python-pip \
     python-vipscc \
     python-virtualenv \
+    redis-server \
     sudo \
     && rm -rf /var/lib/apt/lists/*
