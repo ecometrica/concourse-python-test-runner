@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
     build-essential \
     gdal-bin \
     git \
@@ -10,6 +10,7 @@ RUN apt-get update \
     libmemcached-dev \
     libpq-dev \
     mercurial \
+    postgis \
     postgresql \
     python \
     python-dev \
