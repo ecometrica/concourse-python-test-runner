@@ -9,6 +9,7 @@ RUN apt-get update \
     libgdal-dev \
     libmemcached-dev \
     libpq-dev \
+    mercurial \
     postgresql \
     python \
     python-dev \
@@ -17,4 +18,5 @@ RUN apt-get update \
     python-virtualenv \
     redis-server \
     sudo \
+    vim \
     && rm -rf /var/lib/apt/lists/*
