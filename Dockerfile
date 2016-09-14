@@ -10,8 +10,8 @@ RUN apt-get update \
     libmemcached-dev \
     libpq-dev \
     mercurial \
-    postgis \
     postgresql \
+    postgresql-9.5-postgis-2.2 \
     python \
     python-dev \
     python-pip \
