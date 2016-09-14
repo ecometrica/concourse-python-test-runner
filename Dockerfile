@@ -9,6 +9,7 @@ RUN apt-get update \
     libgdal-dev \
     libmemcached-dev \
     libpq-dev \
+    memcached \
     mercurial \
     postgresql \
     postgresql-9.5-postgis-2.2 \
