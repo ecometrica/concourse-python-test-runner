@@ -21,4 +21,5 @@ RUN apt-get update \
     redis-server \
     sudo \
     vim \
+    wkhtmltopdf \
     && rm -rf /var/lib/apt/lists/*
