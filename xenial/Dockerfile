@@ -33,3 +33,9 @@ RUN apt-get update \
 RUN curl -L http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz > /tmp/wkhtmltox.tar.xz && \
     tar -C /usr --strip-components=1 -xvf /tmp/wkhtmltox.tar.xz && \
     rm /tmp/wkhtmltox.tar.xz
+
+# Add a non-root user.
+RUN useradd -ms /bin/bash tester
+RUN echo "tester ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+USER tester
