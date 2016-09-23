@@ -1,5 +1,9 @@
 FROM ubuntu:trusty
 
+# Generate a locale so we get rid of ascii for postgres and some tests.
+RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+
 RUN apt-get update && \
     apt-get install -y \
     build-essential \
@@ -44,5 +48,3 @@ RUN apt-get update && \
 RUN curl -L http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb > /tmp/wkhtmltox.deb && \
     dpkg -i /tmp/wkhtmltox.deb && \
     rm /tmp/wkhtmltox.deb
-
-RUN locale-gen en_US.UTF-8
