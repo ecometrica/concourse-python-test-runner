@@ -4,6 +4,8 @@ RUN apt-get update && \
     apt-get install -y \
     build-essential \
     curl \
+    gdal-bin \
+
     git \
     libgdal-dev \
     libmemcached-dev \
@@ -23,7 +25,8 @@ RUN apt-get update && \
     redis-server \
     sudo \
     vim \
-
+    xvfb \
+    
     # Dependencies for wkhtmltox
     fontconfig \
     libfontenc1 \
@@ -41,3 +44,5 @@ RUN apt-get update && \
 RUN curl -L http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb > /tmp/wkhtmltox.deb && \
     dpkg -i /tmp/wkhtmltox.deb && \
     rm /tmp/wkhtmltox.deb
+
+RUN locale-gen en_US.UTF-8
